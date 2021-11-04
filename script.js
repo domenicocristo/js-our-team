@@ -10,63 +10,58 @@ let team = [
     },
 
     {
-        "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-        "nameTeam" : "Wayne Barnett",
-        "roleTeam" : "Founder & CEO"
+        "imgTeam" : "img/angela-caroll-chief-editor.jpg",
+        "nameTeam" : "Angela Caroll",
+        "roleTeam" : "Chief Editor"
     },
 
     {
-        "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-        "nameTeam" : "Wayne Barnett",
-        "roleTeam" : "Founder & CEO"
+        "imgTeam" : "img/walter-gordon-office-manager.jpg",
+        "nameTeam" : "Walter Gordon",
+        "roleTeam" : "Office Manager"
     },
 
     {
-        "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-        "nameTeam" : "Wayne Barnett",
-        "roleTeam" : "Founder & CEO"
+        "imgTeam" : "img/angela-lopez-social-media-manager.jpg",
+        "nameTeam" : "Angela Lopez",
+        "roleTeam" : "Social Media Manager"
     },
 
     {
-        "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-        "nameTeam" : "Wayne Barnett",
-        "roleTeam" : "Founder & CEO"
+        "imgTeam" : "img/scott-estrada-developer.jpg",
+        "nameTeam" : "Scott Estrada",
+        "roleTeam" : "Developer"
     },
 
     {
-        "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-        "nameTeam" : "Wayne Barnett",
-        "roleTeam" : "Founder & CEO"
+        "imgTeam" : "img/barbara-ramos-graphic-designer.jpg",
+        "nameTeam" : "Barabara Ramos",
+        "roleTeam" : "Graphic Designer"
     }
 ];
 
-let newTeam = {
-    "imgTeam" : "img/wayne-barnett-founder-ceo.jpg",
-    "nameTeam" : "Wayne Barnett",
-    "roleTeam" : "Founder & CEO"
-}
-
-team.push(newTeam);
-
 let teamContainer = document.querySelector(".team-container");
-let cardImage = document.querySelector(".card-image");
-let cardText = document.querySelector(".card-text");
 
 for (let i = 0; i < team.length; i++) {
     let objteam = team[i];
 
-    for (let key in objteam) {
-        let teamContainer = document.createElement("div").classList.add("team-card");
-        let cardImage = document.createElement("div").classList.add("card-image");
-        cardImage.innerHTML += 
+    let teamCard = document.createElement("div");
+    teamCard.classList.add("team-card");
+    let cardImage = document.createElement("div");
+    cardImage.classList.add("card-image");
+    cardImage.innerHTML += 
         `<div class="card-image">
-            <img src="${objteam[key]}"/>
-        </div>`
-        let cardText = document.createElement("div").classList.add("card-text");
-        cardText.innerHTML += 
+            <img src="${objteam.imgTeam}"/>
+        </div>`;
+    teamCard.appendChild(cardImage);
+    let cardText = document.createElement("div");
+    cardText.classList.add("card-text");
+    cardText.innerHTML += 
         `<div class="card-text">
-             <h3>${objteam[key]}</h3>
-             <p>${objteam[key]}</p>
-        </div>`
-    }
+                <h3>${objteam.nameTeam}</h3>
+                <p>${objteam.roleTeam}</p>
+        </div>`;
+    teamCard.appendChild(cardText);
+
+    teamContainer.appendChild(teamCard);
 }
