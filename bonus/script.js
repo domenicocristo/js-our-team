@@ -64,32 +64,32 @@ for (let i = 0; i < team.length; i++) {
 
 let teamAdd = [
     {
-        "imgTeamAdd" : "",
-        "nameTeamAdd" : "",
-        "roleTeamAdd" : ""
+        "imgTeamAdd" : "img/barbara-ramos-graphic-designer.jpg",
+        "nameTeamAdd" : "prova",
+        "roleTeamAdd" : "prova"
     }
 ];
 
 for (let i = 0; i < teamAdd.length; i++) {
-    let objteam = teamAdd[i];
+    let objteamAdd = teamAdd[i];
 
-    let teamCard = document.createElement("div");
-    teamCard.classList.add("team-card");
+    let teamCardAdd = document.createElement("div");
+    teamCardAdd.classList.add("team-card");
     let cardImageAdd = document.createElement("div");
-    cardImage.classList.add("card-image");
-    cardImage.innerHTML += 
+    cardImageAdd.classList.add("card-image");
+    cardImageAdd.innerHTML += 
         `<div class="card-image">
-            <img src="${objteam.imgTeamAdd}"/>
+            <img src="${objteamAdd.imgTeamAdd}"/>
         </div>`;
-    teamCard.appendChild(cardImageAdd);
-    let cardText = document.createElement("div");
-    cardText.classList.add("card-text");
-    cardText.innerHTML += 
+    teamCardAdd.appendChild(cardImageAdd);
+    let cardTextAdd = document.createElement("div");
+    cardTextAdd.classList.add("card-text");
+    cardTextAdd.innerHTML += 
         `<div class="card-text">
-                <h3>${objteam.nameTeamAdd}</h3>
-                <p>${objteam.roleTeamAdd}</p>
+                <h3>${objteamAdd.nameTeamAdd}</h3>
+                <p>${objteamAdd.roleTeamAdd}</p>
         </div>`;
-    teamCard.appendChild(cardTextAdd);
+    teamCardAdd.appendChild(cardTextAdd);
 
-    teamContainer.appendChild(teamCard);
+    teamContainer.appendChild(teamCardAdd);
 }
