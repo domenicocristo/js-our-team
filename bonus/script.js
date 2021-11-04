@@ -74,17 +74,17 @@ for (let i = 0; i < teamAdd.length; i++) {
     let objteam = teamAdd[i];
 
     let teamCard = document.createElement("div");
-    teamCardAdd.classList.add("team-card");
+    teamCard.classList.add("team-card");
     let cardImageAdd = document.createElement("div");
-    cardImageAdd.classList.add("card-image");
-    cardImageAdd.innerHTML += 
+    cardImage.classList.add("card-image");
+    cardImage.innerHTML += 
         `<div class="card-image">
             <img src="${objteam.imgTeamAdd}"/>
         </div>`;
     teamCard.appendChild(cardImageAdd);
-    let cardTextAdd = document.createElement("div");
-    cardTextAdd.classList.add("card-text");
-    cardTextAdd.innerHTML += 
+    let cardText = document.createElement("div");
+    cardText.classList.add("card-text");
+    cardText.innerHTML += 
         `<div class="card-text">
                 <h3>${objteam.nameTeamAdd}</h3>
                 <p>${objteam.roleTeamAdd}</p>
