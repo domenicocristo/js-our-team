@@ -49,12 +49,24 @@ let newTeam = {
 team.push(newTeam);
 
 let teamContainer = document.querySelector(".team-container");
+let cardImage = document.querySelector(".card-image");
+let cardText = document.querySelector(".card-text");
 
 for (let i = 0; i < team.length; i++) {
     let objteam = team[i];
 
     for (let key in objteam) {
-        console.log(key, objteam[key]);
-        teamContainer.innerHTML = (key, objteam);
+        let teamContainer = document.createElement("div").classList.add("team-card");
+        let cardImage = document.createElement("div").classList.add("card-image");
+        cardImage.innerHTML += 
+        `<div class="card-image">
+            <img src="${objteam[key]}"/>
+        </div>`
+        let cardText = document.createElement("div").classList.add("card-text");
+        cardText.innerHTML += 
+        `<div class="card-text">
+             <h3>${objteam[key]}</h3>
+             <p>${objteam[key]}</p>
+        </div>`
     }
 }
